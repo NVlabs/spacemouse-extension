@@ -1,0 +1,29 @@
+[core]
+reloadable = true
+order = 0
+
+[package]
+version = "1.0.0"
+category = "Simulation"
+title = "SRL SpaceMouse"
+description = "Extension providing SpaceMouse input"
+authors = ["NVIDIA"]
+repository = ""
+keywords = ["isaac", "manipulation", "input", "teleoperation"]
+changelog = "docs/CHANGELOG.md"
+readme = "README.md"
+writeTarget.kit = true
+
+[dependencies]
+"omni.kit.uiapp" = {}
+"omni.isaac.ui" = {}
+
+[[python.module]]
+name = "srl.spacemouse"
+
+[[test]]
+timeout = 960
+
+[python.pipapi]
+requirements = ["numpy", "hidapi"]
+use_online_index = true
